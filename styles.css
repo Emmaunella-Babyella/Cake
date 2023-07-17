@@ -44,7 +44,7 @@ nav ul a{
 }
 
 nav ul li:hover{
-    color: dodgerblue;
+    color: #1e90ff;
     box-shadow: none;
 }
 
