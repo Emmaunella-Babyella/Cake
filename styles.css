@@ -9,8 +9,8 @@ html{
 }
 
 body{
-    font-weight: 200;
     color: #fff;
+    font-size: inter, sans-serif;
     overflow-x: hidden;
 }
 
@@ -22,96 +22,92 @@ nav{
     position: fixed;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 2rem;
-    background-color: blue;
-    padding: 20px 0;
+    background-color: #0000ff;
+    padding: 1rem 5rem;
+    font-family: 'inter', sans-serif;
 }
 
 nav ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
     list-style: none;
 }
 
 nav ul a{
-    font-size: 22px;
+    font-size: 1rem;
     color: #fff;
     text-decoration: none;
-}
-
-nav ul li::first-letter{
-    content: " ";
-    font-size: 40px;
 }
 
 nav ul li:hover{
     color: #000;
     box-shadow: none;
-    animation-name: textzoom;
-    animation-duration: 5s;
-}
-
-@keyframes textzoom{
-    0%{
-        font-size: 40px;
-    }
-    100%
-    {
-        font-size: 50%;
-    }
 }
 
 nav h1{
-    font-size: 35px;
-    width: 20%;
+    font-size: 2rem;
 }
 
-nav h1::first-letter{
-    content: " ";
-    font-size: 45px;
-}
-
-nav span{
-    color: #070707;
+nav h1 span{
+    color: #3f9af5ce;
     text-decoration: underline;
 }
-nav span::first-letter{
-    content: " ";
-    font-size: 45px;
-}
 
-nav .i{
-    font-size: 30px;
-    width: 2%;
-}
-
-nav .i:hover{
-    color: #000;
-    box-shadow: none;
-    animation-name: textzoom;
-    animation-duration: 5s;
-}
-
-@keyframes textzoom{
-    0%{
-        font-size: 40px;
-    }
-    100%
-    {
-        font-size: 50%;
-    }
-}
-
-.search input{ 
+.search{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #000;
     background-color: #fff;
-    border-radius: 15px;
+    border-radius: 5px;
     border: none;
-    padding: 0.5rem 0.1rem;
+    position: relative;
+}
+
+nav .cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cart .search input{
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0.5rem .6rem;
+}
+
+.cart .search input::placeholder{
+    font-size: 1rem;
+    font-family: 'inter', sans-serif;
+    color: #0000ff;
+}
+
+.cart .search .search-icon{
+    position: absolute;
+    right: 0rem;
+    color: #0000ff;
+    font-size: 1rem;
+    z-index: 2;
+    background: #fff;
+    width: 15%;
+    height: 100%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+.cart .i{
+    font-size: 2rem;
+}
+
+.cart .i:hover{
+    color: #000;
 }
 
 .hero{
@@ -124,6 +120,8 @@ nav .i:hover{
     padding-bottom: 0;
     line-height: 1.55rem;
     font-size: 20px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -149,22 +147,18 @@ nav .i:hover{
 
 .btn{
     padding: 0.6rem 1.25rem;
-    color: blue;
+    color: #0a0efd;
     background: transparent;
     border-radius: 15px;
-    border-color: blue;
+    border: 2px solid #0a0efd;
     font-size: 18px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-left: 200px;
+    margin-top: 2rem;
+    margin-left: 5rem;
 }
 
 .btn:hover{
-    box-shadow: none;
     background-color: #0a0efd;
     color: #fff;
-    border: none;
 }
 
 .card img{
@@ -269,6 +263,7 @@ nav .i:hover{
 }
 
 .boxes{
+    flex-wrap: wrap;
     padding: 13px;
     padding-bottom: 0;
     margin-top: 2rem;
